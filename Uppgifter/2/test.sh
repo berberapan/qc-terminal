@@ -1,10 +1,11 @@
 #!/bin/bash
 
-# Color codes for output
+# Colour codes for output
 GREEN='\033[32m'
 RED='\033[31m'
 BLUE='\033[34m'
-NC='\033[0m' # No Color
+YELLOW='\033[33m'
+NC='\033[0m' # To reset colour
 
 setup_files() {
     cleanup_files
@@ -33,17 +34,19 @@ main() {
 
     # Question 1
     echo -e "${BLUE}Fråga 1: Vilken fil är störst?${NC}"
+    echo -e "${YELLOW}Du kan använda kommandon som vanligt. När du vill ge ditt svar skriv 'svara'.${NC}"
+    echo -e "${YELLOW}'Svara' måste anges vid varje nytt försök.${NC}"
     
     while true; do
         read -e -p "> " command
         
-        if [ "$command" = "svara" ]; then
+        if [ "${command,,}" = "svara" ]; then
             read -p "Ditt svar: " answer
             if [ "$answer" = "file2.txt" ]; then
                 echo -e "${GREEN}Precis så!${NC}\n"
                 break
             else
-                echo -e "${RED}Inte riktigt. Det finns en flagga som visar storleken på alla filer.${NC}"
+                echo -e "${RED}Inte riktigt. Det finns en flagga som inkluderar storleken på alla filer.${NC}"
             fi
         else
             eval "$command"
@@ -56,7 +59,7 @@ main() {
     while true; do
         read -e -p "> " command
         
-        if [ "$command" = "svara" ]; then
+        if [ "${command,,}" = "svara" ]; then
             read -p "Ditt svar: " answer
             if [ "$answer" = "3" ]; then
                 echo -e "${GREEN}Korrekt!${NC}\n"
@@ -75,7 +78,7 @@ main() {
     while true; do
         read -e -p "> " command
         
-        if [ "$command" = "svara" ]; then
+        if [ "${command,,}" = "svara" ]; then
             read -p "Ditt svar: " answer
             if [[ "$answer" == .hidden* ]]; then
                 echo -e "${GREEN}Perfekt, en fråga kvar.${NC}"
@@ -94,13 +97,13 @@ main() {
     while true; do
         read -e -p "> " command
         
-        if [ "$command" = "svara" ]; then
+        if [ "${command,,}" = "svara" ]; then
             read -p "Ditt svar: " answer
             if [[ "$answer" == "file4.txt" ]]; then
                 echo -e "${GREEN}Snyggt! Alla frågor avklarade${NC}"
                 break
             else
-                echo -e "${RED}Inte riktigt. Tänk på att om datumet är längre än 6 månader tillbaka så visas även året.${NC}"
+                echo -e "${RED}Inte riktigt. Om datumet är längre tillbaka än 6 månader så visas även året.${NC}"
             fi
         else
             eval "$command"
@@ -108,10 +111,11 @@ main() {
     done
 
     echo -e "\nBra jobbat! Du kan nu:"
-    echo "1. Hitta filer med ls -l"
+    echo "1. Hitta filinfo med ls -l"
     echo "2. Hitta dolda filer med ls -a"
     echo "3. Identifiera dolda filer"
     echo "4. Se när en fil senast ändrades"
+    echo
 
     cleanup_files
 }
