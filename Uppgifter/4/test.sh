@@ -27,7 +27,7 @@ setup3() {
 }
 
 cleanup_files() {
-    rm -rf projekt backup gamla_filer fil*.tmp viktigt.txt
+    rm -rf projekt backup gamla_filer temp_filer fil*.tmp viktigt.txt
 }
 
 validate_copy() {
@@ -98,7 +98,7 @@ men låt originalfilen vara kvar. Skriv 'svara' när du är klar.${NC}"
     setup3
     # Question 3
     echo -e "${BLUE}Uppgift 3: Ett antal temporära filer har skapats i katalogen. Flytta alla till \
-        katalogen 'temp_filer' (Kom ihåg att det kan göras med ett kommando). Skriv 'svara' när du är klar.${NC}"
+katalogen 'temp_filer' (Kom ihåg att det kan göras med ett kommando). Skriv 'svara' när du är klar.${NC}"
     
     while true; do
         read -e -p "> " command
