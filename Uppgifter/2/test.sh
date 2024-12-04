@@ -33,7 +33,7 @@ main() {
     echo
 
     # Question 1
-    echo -e "${BLUE}Fråga 1: Vilken fil är störst?${NC}"
+    echo -e "${BLUE}Uppgift 1: Vilken fil är störst?${NC}"
     echo -e "${YELLOW}Du kan använda kommandon som vanligt. När du vill ge ditt svar skriv 'svara'.${NC}"
     echo -e "${YELLOW}'Svara' måste anges vid varje nytt försök.${NC}"
     
@@ -54,7 +54,7 @@ main() {
     done
 
     # Question 2
-    echo -e "${BLUE}Fråga 2: Hur många dolda filer finns det i katalogen?${NC}"
+    echo -e "${BLUE}Uppgift 2: Hur många dolda filer finns det i katalogen?${NC}"
     
     while true; do
         read -e -p "> " command
@@ -73,7 +73,7 @@ main() {
     done
 
     # Question 3
-    echo -e "${BLUE}Fråga 3: Namnge en av de dolda filerna:${NC}"
+    echo -e "${BLUE}Uppgift 3: Namnge en av de dolda filerna:${NC}"
     
     while true; do
         read -e -p "> " command
@@ -92,7 +92,7 @@ main() {
     done
 
     # Question 4
-    echo -e "${BLUE}Fråga 4: Vilken fil har inte ändrats på längst tid?:${NC}"
+    echo -e "${BLUE}Uppgift 4: Vilken fil har inte ändrats på längst tid?:${NC}"
     
     while true; do
         read -e -p "> " command

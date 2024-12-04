@@ -46,7 +46,7 @@ main() {
     setup1
     echo
     # Question 1
-    echo -e "${BLUE}Fråga 1: Vilken stad omnämns i setup.txt?${NC}"
+    echo -e "${BLUE}Uppgift 1: Vilken stad omnämns i setup.txt?${NC}"
     echo -e "${YELLOW}Du kan använda kommandon som vanligt. När du vill ge ditt svar skriv 'svara'.${NC}"
     echo -e "${YELLOW}'Svara' måste anges vid varje nytt försök.${NC}"
 
@@ -68,7 +68,7 @@ main() {
     setup2
 
     #Question 2
-    echo -e "${BLUE}Fråga 2: En punchline.txt har nu skapats i katalogen. Skapa en tredje fil där du sammanfogar setup följt av punchline \
+    echo -e "${BLUE}Uppgift 2: En punchline.txt har nu skapats i katalogen. Skapa en tredje fil där du sammanfogar setup följt av punchline \
 med hjälp av cat kommandot.\nGe den nya filen namnet "perfection.txt" och skriv 'svara' när filen är skapad.${NC}"
 
     while true; do
@@ -88,7 +88,7 @@ med hjälp av cat kommandot.\nGe den nya filen namnet "perfection.txt" och skriv
     setup3
 
     #Question 3
-    echo -e "${BLUE}Fråga 3: Vi har nu en ny fil i katalogen. Använd dina kunskaper för att ta reda på namnet på filen och ta hjälp av ett kommando \
+    echo -e "${BLUE}Uppgift 3: Vi har nu en ny fil i katalogen. Använd dina kunskaper för att ta reda på namnet på filen och ta hjälp av ett kommando \
 för att få fram hur många ORD (inte rader som i exemplet) som finns i filen och ange det när du svarar.${NC}"
 
     while true; do
