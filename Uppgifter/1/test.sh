@@ -12,7 +12,7 @@ NC='\033[0m' # To reset colour
 if [ -z "$greeting" ]; then
     echo -e "${RED}greeting-variablen är inte satt.${NC}"
     exit 1
-elif [ "$greeting" != "Hello world!" ]; then
+elif [ "$greeting" != "Hello world" ]; then
     echo -e "${RED}greeting har fel värde. Den returnerar $greeting${NC}"
     echo -e "${RED}Kolla så små och stora bokstäver är korrekt.${NC}"
     exit 1
